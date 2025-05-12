@@ -19,7 +19,7 @@ The ECLIPSEMOON AI Protocol Framework is a comprehensive suite of tools designed
 ## Project Structure
 
 ```
-eclipsemoon-defi-ai/
+eclipse-defi-ai/
 ├── drift/                  # Drift protocol integration
 │   ├── perps-close/        # Close perpetual positions
 │   ├── perps-open/         # Open new perpetual positions

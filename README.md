@@ -78,3 +78,23 @@ eclipse-defi-ai/
 ```bash
 git clone hhttps://github.com/eclipseresearch/eclipse-defi-ai.git
 cd eclipse-defi-ai
+
+# Using venv (Python 3.10+ recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+pip install -e .
+# Or for development dependencies
+pip install -e ".[dev]"
+
+cp .env.example .env
+# Edit .env file with your configuration settings
+
+# For Ubuntu/Debian
+sudo apt-get update
+sudo apt-get install -y build-essential libssl-dev libffi-dev python3-dev
+
+# For macOS
+brew install openssl
+
+python setup.py

@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+ECLIPSEMOON AI Protocol Framework
+Main entry point for the framework
+Author: ECLIPSEMOON
+"""
+
+import os
+import sys
+import logging
+import argparse
+import asyncio
+import yaml
+import signal
+import time
+from typing import Dict, List, Optional, Union, Any
+from datetime import datetime
+from pathlib import Path
+
+# Configure logging
+def setup_logging(log_level: str = "INFO", log_file: Optional[str] = None):
+    """Set up logging configuration"""
+    numeric_level = getattr(logging, log_level.upper(), None)
+    if not isinstance(numeric_level, int):
+        raise ValueError(f"Invalid log level: {log_level}")
+    
+    log_format = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    
+    handlers = [logging.StreamHandler(sys.stdout)]
+    
+    if log_file:
+        os.makedirs(os.path.dirname(log_file), exist_ok=True)
+        handlers.append(logging.FileHandler(log_file))
+    
+    logging.basicConfig(
+        level=numeric_level,
+        format=log_format,
+        handlers=handlers
+    )
+
+# Set up initial logging
+setup_logging()
+logger = logging.getLogger("eclipsemoon")
+
+# Import core modules
+try:
+    from core.config.config_manager import ConfigManager
+    from core.security.key_manager import KeyManager
+    from core.blockchain.client import BlockchainClient
+    from core.data.market_data import MarketDataProvider
+    from core.ai.model_manager import ModelManager
+    from core.utils.telemetry import Telemetry
+    from core.utils.notification import NotificationManager
+except ImportError as e:
+    logger.error(f"Failed to import core modules: {e}")
+    logger.error("Make sure you have installed the package correctly.")
+    sys.exit(1)
+
+# Import protocol modules dynamically
+PROTOCOLS = ["drift", "jupite

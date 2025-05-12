@@ -1,7 +1,7 @@
 # ECLIPSEMOON AI Protocol Framework
 
 <div align="center">
-  <img src="https://ik.imagekit.io/rzu2i5t1r/Orbit.png?updatedAt=1747026694375" alt="ECLIPSEMOON Logo" width="100%">
+  <img src="https://ik.imagekit.io/rzu2i5t1r/New%20Project%20(18).png?updatedAt=1747026967076" alt="ECLIPSEMOON Logo" width="100%">
 </div>
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)

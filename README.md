@@ -76,5 +76,5 @@ eclipsemoon-ai/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ECLIPSEMOON/eclipsemoon-ai.git
-cd eclipsemoon-ai
+git clone hhttps://github.com/eclipseresearch/eclipse-defi-ai.git
+cd eclipse-defi-ai

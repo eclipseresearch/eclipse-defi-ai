@@ -47,6 +47,10 @@ eclipse-defi-ai/
 ├── marginfi/               # MarginFi protocol integration
 │   ├── supply/             # Supply assets to MarginFi
 │   └── withdraw/           # Withdraw assets from MarginFi
+├── market_making/          # AI-powered market making
+│   ├── models/             # AI models for market making
+│   ├── strategies/         # Market making strategies
+│   └── utils/              # Market making utilities
 ├── meteora/                # Meteora protocol integration
 │   ├── add-liquidity/      # Add liquidity to Meteora pools
 │   ├── launch-token/       # Token launch utilities
